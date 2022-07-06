@@ -16,8 +16,16 @@ public class Control2_ex2 {
 		ch = sc.next().charAt(0);
 		
 		ch = (char)(ch + num);
+		int result = 0;
+		result = ch;
 		
-		System.out.println("ch : "+ ch);
+		if(result <= 122) {
+			System.out.println("ch : "+ ch);
+		} else {
+			result = 96+num;
+			System.out.println((char)result);
+			
+		}
 		
 		
 		System.out.println();
