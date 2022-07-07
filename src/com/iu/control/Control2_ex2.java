@@ -15,24 +15,26 @@ public class Control2_ex2 {
 		System.out.println("알파벳을 입력");
 		ch = sc.next().charAt(0);
 		
-		ch = (char)(ch + num);
-		int result = 0;
-		result = ch;
 		
-		if(result <= 122) {
-			System.out.println("ch : "+ ch);
-		} else {
-			result = 96+num;
-			System.out.println((char)result);
+		int result = (char)(ch + num);
+
+		//소문자가 범위를 벗어났을 때
+		if(result > 'z') {
+			result = result - 'z' -1;
+			result = 'a' + result;
+		}
+		//대문자가 범위를 벗어났을 때
+		if(result > 'Z' && result < 'a') {
+			result = result-'Z'- 1;
+			result = 'A' + result;
 		}
 		
+		System.out.println((char)result);
 		
 		System.out.println();
 		System.out.println("Finish");
 
-		System.out.println("깃헙에서 추가함");
-		//안바뀌나...
-		
+
 
 	}
 
