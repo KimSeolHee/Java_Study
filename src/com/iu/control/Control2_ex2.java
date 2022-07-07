@@ -29,8 +29,10 @@ public class Control2_ex2 {
 		
 		System.out.println();
 		System.out.println("Finish");
-		//Study Edition
-		//Study Edition
+
+		System.out.println("깃헙에서 추가함");
+		//안바뀌나...
+		
 
 	}
 
