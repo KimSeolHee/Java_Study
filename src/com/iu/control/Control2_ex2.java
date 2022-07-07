@@ -32,7 +32,7 @@ public class Control2_ex2 {
 		System.out.println("Finish");
 		
 		
-		
+		// 집에서 
 
 	}
 
