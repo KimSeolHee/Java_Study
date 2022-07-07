@@ -24,15 +24,13 @@ public class Control2_ex2 {
 		} else {
 			result = 96+num;
 			System.out.println((char)result);
-			
 		}
 		
 		
 		System.out.println();
 		System.out.println("Finish");
-		
-		
-		
+		//Study Edition
+		//Study Edition
 
 	}
 
