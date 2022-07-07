@@ -30,7 +30,7 @@ public class Control2_ex2 {
 		
 		System.out.println();
 		System.out.println("Finish");
-		
+		//안바뀌나...
 		
 		// 집에서 
 
