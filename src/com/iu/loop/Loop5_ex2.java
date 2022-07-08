@@ -45,7 +45,7 @@ public class Loop5_ex2 {
 				comstr = "✋";
 			}
 			
-			System.out.print("👩 = " + str +"\t ");
+			System.out.print("👩 = " + str +"\t vs  ");
 			System.out.println("🖥 = " + comstr);
 			
 			if(user == 0) {
@@ -55,7 +55,7 @@ public class Loop5_ex2 {
 					System.out.println("사용자가 졌습니다.");
 				}else if(com == 2){
 					System.out.println();
-					System.out.println("승리!!!");
+					System.out.println("승리!!! You Win★");
 					result = !result;
 					break;
 				}
@@ -68,7 +68,7 @@ public class Loop5_ex2 {
 					System.out.println("사용자가 졌습니다.");
 				}else {
 					System.out.println();
-					System.out.println("승리!!!");
+					System.out.println("승리!!! You Win★");
 					result = !result;
 					break;
 				}
@@ -81,14 +81,14 @@ public class Loop5_ex2 {
 					System.out.println("사용자가 졌습니다.");
 				}else {
 					System.out.println();
-					System.out.println("승리!!!");
+					System.out.println("승리!!! You Win★");
 					result = !result;
 					break;
 				}
 			}
 		
 			System.out.println("\n===================================");
-			System.out.println("재도전");
+			System.out.println("\t\t재도전");
 			System.out.println("===================================\n");
 			System.out.println("0.✌ 1.✊ 2.✋  👉 숫자를 입력하시오.");
 			user = sc.nextInt();
@@ -97,22 +97,32 @@ public class Loop5_ex2 {
 		
 		
 		//강사님 코드
-		boolean check = true;
-		while(check) {
-			System.out.println("0.✌ 1.✊ 2.✋");
-			int you = sc.nextInt();
-			int com = random.nextInt();
-			
-			if(com < you) {
-				System.out.println("You Win!!");
-				break;
-			}else if(com == you) {
-				System.out.println("Even!");
-			}else {
-				System.out.println("Com Win!!");
-			}
-			
-		}
+//		boolean check = true;
+//		while(check) {
+//			System.out.println("0.✌ 1.✊ 2.✋");
+//			int you = sc.nextInt();
+//			int com = random.nextInt();
+//			com = 2;
+//			
+//			System.out.println("You: " + you + " Com: " + com);
+//			
+//			if(com == 0 && you == 2) {
+//				you = -1;
+//			}
+//			if(com == 2 && you == 0) {
+//				com = -1;
+//			}
+//			
+//			if(com < you) {
+//				System.out.println("You Win!!");
+//				break;
+//			}else if(com == you) {
+//				System.out.println("Even!");
+//			}else {
+//				System.out.println("Com Win!!");
+//			}
+//			
+//		}
 		
 		
 		
