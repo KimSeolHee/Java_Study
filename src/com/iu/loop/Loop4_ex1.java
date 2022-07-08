@@ -11,19 +11,23 @@ public class Loop4_ex1 {
 		System.out.println("몇 분 몇 초 입니까?");
 		int mm = sc.nextInt();
 		int ss = sc.nextInt();
+		
+		boolean flag = false;
 
 		for(int m = 0;m < 60;m++) {
 			for(int s = 0;s < 60;s++) {
-				System.out.println(m +"분" + s + "초");
+				System.out.println(m +"분 " + s + "초");
 				if(mm == m && ss == s) {
+					flag = !flag;
+					m = 60;
 					break;
 				}
 			}
-			
-			if(m == mm) {
-				break;
-			}
-		}
+
+//			if(flag) {
+//				break;
+//			}
 		}
 	}
+}
 
