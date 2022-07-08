@@ -11,7 +11,6 @@ public class Loop4_ex1 {
 		System.out.println("몇 분 몇 초 입니까?");
 		int mm = sc.nextInt();
 		int ss = sc.nextInt();
-		
 
 		for(int m = 0;m < 60;m++) {
 			for(int s = 0;s < 60;s++) {
@@ -19,8 +18,12 @@ public class Loop4_ex1 {
 				if(mm == m && ss == s) {
 					break;
 				}
-			}break;
+			}
+			
+			if(m == mm) {
+				break;
+			}
+		}
 		}
 	}
 
-}
