@@ -59,18 +59,25 @@ public class Array_ex3 {
 		while(check) {
 			System.out.println("1. 학생정보 조회 2. 학생정보 검색 3. 학생정보 삭제 4. 학생정보 추가 5. 프로그램 종료");
 			int choice = sc.nextInt();
+			int inputNum = sc.nextInt();
 			
-			
+			//1.조회
 			if(choice == 1) {
-				for(int i = 0; i < names.length;i++) {
-					System.out.println("학생이름: " + names[i]+" 번호: "+nums[i]+" 국어: "+kors[i]+" 영어: "+engs[i]+" 수학: "+maths[i]+" 총점: "+totals[i]+" 평균: "+averages[i]);
+				if(names.length > 0) {
+					for(int i = 0; i < names.length;i++) {
+						System.out.println("학생이름: " + names[i]+" 번호: "+nums[i]+" 국어: "+kors[i]+" 영어: "+engs[i]+" 수학: "+maths[i]+" 총점: "+totals[i]+" 평균: "+averages[i]);
+					}
+					System.out.println("=========================================================================");
+				}else {
+					System.out.println("학생 정보가 없습니다.");
+					System.out.println("=========================================================================");
 				}
-				System.out.println("=========================================================================");
 				
+			//2.검색	
 			}else if(choice == 2) {
-				boolean flag = true;
 				System.out.println("검색 할 학생의 번호를 입력하시오.");
-				int inputNum = sc.nextInt();
+				inputNum = sc.nextInt();
+				boolean flag = true;
 				for(int i = 0;i < names.length;i++) {
 					if(nums[i] == inputNum) {
 						System.out.println("학생이름: " + names[i]+" 번호: "+nums[i]+" 국어: "+kors[i]+" 영어: "+engs[i]+" 수학: "+maths[i]+" 총점: "+totals[i]+" 평균: "+averages[i]);
@@ -78,25 +85,27 @@ public class Array_ex3 {
 						break;
 					}
 				}
+				
 				if(flag) {
 					System.out.println("일치하는 학생이 없습니다.");
 				}
 				System.out.println("=========================================================================");
 
-				
+			//3.삭제
 			}else if(choice == 3) {
 				System.out.println("삭제 할 학생의 번호를 입력하시오.");
-				
+				inputNum = sc.nextInt();
+				boolean flag = false;
 				System.out.println("삭제가 되었습니다.");
 				System.out.println("=========================================================================");
 				
-				
+			//4.추가	
 			}else if(choice == 4) {
 				System.out.println("학생 정보 추가");
 				
 				System.out.println("=========================================================================");
 				
-				
+			//5.종료	
 			}else {
 				System.out.println("프로그램 종료");
 				check = !check;
