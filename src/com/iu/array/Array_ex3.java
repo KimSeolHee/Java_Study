@@ -29,15 +29,15 @@ public class Array_ex3 {
 		int stNum = sc.nextInt();
 		
 		String [] names = new String[stNum];
-		int [] nums = new int[stNum];
-		int [] kors = new int[stNum];
-		int [] engs = new int[stNum];
-		int [] maths = new int[stNum];
-		int [] totals = new int[stNum];
-		int [] averages = new int[stNum];
+		int [] nums = new int[names.length];
+		int [] kors = new int[names.length];
+		int [] engs = new int[names.length];
+		int [] maths = new int[names.length];
+		int [] totals = new int[names.length];
+		int [] averages = new int[names.length];
 		
 
-		for(int i = 0;i <stNum;i++) {
+		for(int i = 0;i <names.length;i++) {
 			System.out.println("학생 이름");
 			names[i] = sc.next();
 			System.out.println("학생 번호");
@@ -62,16 +62,16 @@ public class Array_ex3 {
 			
 			
 			if(choice == 1) {
-				for(int i = 0; i < stNum;i++) {
+				for(int i = 0; i < names.length;i++) {
 					System.out.println("학생이름: " + names[i]+" 번호: "+nums[i]+" 국어: "+kors[i]+" 영어: "+engs[i]+" 수학: "+maths[i]+" 총점: "+totals[i]+" 평균: "+averages[i]);
 				}
-				
+				System.out.println("=========================================================================");
 				
 			}else if(choice == 2) {
 				boolean flag = true;
 				System.out.println("검색 할 학생의 번호를 입력하시오.");
 				int inputNum = sc.nextInt();
-				for(int i = 0;i < nums.length;i++) {
+				for(int i = 0;i < names.length;i++) {
 					if(nums[i] == inputNum) {
 						System.out.println("학생이름: " + names[i]+" 번호: "+nums[i]+" 국어: "+kors[i]+" 영어: "+engs[i]+" 수학: "+maths[i]+" 총점: "+totals[i]+" 평균: "+averages[i]);
 						flag = !flag;
@@ -81,26 +81,20 @@ public class Array_ex3 {
 				if(flag) {
 					System.out.println("일치하는 학생이 없습니다.");
 				}
+				System.out.println("=========================================================================");
 
 				
 			}else if(choice == 3) {
-				boolean flag = true;
 				System.out.println("삭제 할 학생의 번호를 입력하시오.");
-				int inputNum = sc.nextInt();
-				for(int i = 0;i < nums.length;i++) {
-					if(nums[i] == inputNum) {
-						System.out.println();
-						flag = !flag;
-						break;
-					}
-				}
-				if(flag) {
-					System.out.println("일치하는 학생이 없습니다.");
-				}			
+				
+				System.out.println("삭제가 되었습니다.");
+				System.out.println("=========================================================================");
+				
 				
 			}else if(choice == 4) {
 				System.out.println("학생 정보 추가");
 				
+				System.out.println("=========================================================================");
 				
 				
 			}else {
