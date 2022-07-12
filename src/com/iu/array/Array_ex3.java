@@ -25,45 +25,54 @@ public class Array_ex3 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("학생 수를 입력하세요.");
-		int stNum = sc.nextInt();
-		
-		String [] names = new String[stNum];
-		int [] nums = new int[names.length];
-		int [] kors = new int[names.length];
-		int [] engs = new int[names.length];
-		int [] maths = new int[names.length];
-		int [] totals = new int[names.length];
-		int [] averages = new int[names.length];
-		
-
-		for(int i = 0;i <names.length;i++) {
-			System.out.println("학생 이름");
-			names[i] = sc.next();
-			System.out.println("학생 번호");
-			nums[i] = sc.nextInt();
-			System.out.println("국어점수");
-			kors[i] = sc.nextInt();
-			System.out.println("영어점수");
-			engs[i] = sc.nextInt();
-			System.out.println("수학점수");
-			maths[i] = sc.nextInt();
-			totals[i] = kors[i]+engs[i]+maths[i];
-			averages[i] = totals[i] / 3;
-		}
-		
-	
+		String [] names = null;
+		int [] nums = null;
+		int [] kors = null;
+		int [] engs = null;
+		int [] maths = null;
+		int [] totals = null;
+		int [] averages = null;
 		
 		boolean check = true;
 		
 		while(check) {
-			System.out.println("1. 학생정보 조회 2. 학생정보 검색 3. 학생정보 삭제 4. 학생정보 추가 5. 프로그램 종료");
-			int choice = sc.nextInt();
-			int inputNum = sc.nextInt();
 			
-			//1.조회
+			System.out.println("1. 학생정보 입력 2. 학생정보 조회 3. 학생정보 검색 4. 학생정보 삭제 5. 학생정보 추가 6. 프로그램 종료");
+			int choice = sc.nextInt();
+			
 			if(choice == 1) {
-				if(names.length > 0) {
+				System.out.println("학생 수를 입력하세요.");
+				int stNum = sc.nextInt();
+				
+				names = new String[stNum];
+				nums = new int[names.length];
+				kors = new int[names.length];
+				engs = new int[names.length];
+				maths = new int[names.length];
+				totals = new int[names.length];
+				averages = new int[names.length];
+				
+
+				for(int i = 0;i <names.length;i++) {
+					System.out.println("학생 이름");
+					names[i] = sc.next();
+					System.out.println("학생 번호");
+					nums[i] = sc.nextInt();
+					System.out.println("국어점수");
+					kors[i] = sc.nextInt();
+					System.out.println("영어점수");
+					engs[i] = sc.nextInt();
+					System.out.println("수학점수");
+					maths[i] = sc.nextInt();
+					totals[i] = kors[i]+engs[i]+maths[i];
+					averages[i] = totals[i] / 3;
+				}
+				System.out.println("=========================================================================");
+			}
+			
+			//2.조회
+			else if(choice == 2) {
+				if(names != null) {
 					for(int i = 0; i < names.length;i++) {
 						System.out.println("학생이름: " + names[i]+" 번호: "+nums[i]+" 국어: "+kors[i]+" 영어: "+engs[i]+" 수학: "+maths[i]+" 총점: "+totals[i]+" 평균: "+averages[i]);
 					}
@@ -73,16 +82,16 @@ public class Array_ex3 {
 					System.out.println("=========================================================================");
 				}
 				
-			//2.검색	
-			}else if(choice == 2) {
+			//3.검색	
+			}else if(choice == 3) {
 				System.out.println("검색 할 학생의 번호를 입력하시오.");
-				inputNum = sc.nextInt();
+				int inputNum = sc.nextInt();
 				boolean flag = true;
 				for(int i = 0;i < names.length;i++) {
 					if(nums[i] == inputNum) {
 						System.out.println("학생이름: " + names[i]+" 번호: "+nums[i]+" 국어: "+kors[i]+" 영어: "+engs[i]+" 수학: "+maths[i]+" 총점: "+totals[i]+" 평균: "+averages[i]);
 						flag = !flag;
-						break;
+//						break;
 					}
 				}
 				
@@ -91,21 +100,21 @@ public class Array_ex3 {
 				}
 				System.out.println("=========================================================================");
 
-			//3.삭제
-			}else if(choice == 3) {
+			//4.삭제
+			}else if(choice == 4) {
 				System.out.println("삭제 할 학생의 번호를 입력하시오.");
-				inputNum = sc.nextInt();
+				int inputNum = sc.nextInt();
 				boolean flag = false;
 				System.out.println("삭제가 되었습니다.");
 				System.out.println("=========================================================================");
 				
-			//4.추가	
-			}else if(choice == 4) {
+			//5.추가	
+			}else if(choice == 5) {
 				System.out.println("학생 정보 추가");
 				
 				System.out.println("=========================================================================");
 				
-			//5.종료	
+			//6.종료	
 			}else {
 				System.out.println("프로그램 종료");
 				check = !check;
